@@ -1,5 +1,11 @@
-# What are we singing about?
-Lyric and metadata analysis of the current Billboard Hot 100 songs, updated weekly. [Check out the dashboard here!](https://what-are-we-singing-about-d52172de0f31.herokuapp.com/)
+# What are we Singing About?
+Lyric and metadata analysis of the current Billboard Hot 100 songs, updated weekly.
+
+## The dashboard
+
+[Check out the interactive dashboard here!](https://what-are-we-singing-about-d52172de0f31.herokuapp.com/)
+
+![](dashboard_screenshot.png)
 
 ## Architecture
 

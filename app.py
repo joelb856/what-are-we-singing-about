@@ -88,7 +88,7 @@ def plot_alltime_data(option):
             marker=dict(color="#444"),
             line=dict(width=0),
             mode='lines',
-            fillcolor='rgba(68, 68, 68, 0.3)',
+            fillcolor='rgba(31, 119, 180, 0.4)',
             fill='tonexty',
             hoverinfo = 'skip'
         )
@@ -121,7 +121,7 @@ def plot_alltime_data(option):
             marker=dict(color="#444"),
             line=dict(width=0),
             mode='lines',
-            fillcolor='rgba(68, 68, 68, 0.3)',
+            fillcolor='rgba(31, 119, 180, 0.4)',
             fill='tonexty',
             hoverinfo = 'skip'
         )
@@ -160,8 +160,9 @@ alltime_options = ["Artist Popularity", "Emotions", "Word Frequency", "Song Dura
 weekly_options = ["Song Duration", "Weeks on Chart"]
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
-load_figure_template('CYBORG')
-s3 = boto3.resource('s3')
+load_figure_template("cyborg")
+server = app.server
+s3 = boto3.resource('s3', region_name='us-east-2')
 df = pd.read_json(s3.Object('what-are-we-singing-about', 'df_final.json').get()['Body'].read().decode('UTF-8'))
 df_artist_pop = pd.read_json(s3.Object('what-are-we-singing-about', 'df_artist_pop.json').get()['Body'].read().decode('UTF-8'))
 df_emotion = pd.read_json(s3.Object('what-are-we-singing-about', 'df_emotion.json').get()['Body'].read().decode('UTF-8'))
