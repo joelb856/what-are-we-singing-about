@@ -1,5 +1,5 @@
 # What are we singing about?
-Lyric and metadata analysis of the current Billboard Hot 100 songs, updated weekly.
+Lyric and metadata analysis of the current Billboard Hot 100 songs, updated weekly. [Check out the dashboard here!](https://what-are-we-singing-about-d52172de0f31.herokuapp.com/)
 
 ## Architecture
 
@@ -17,4 +17,4 @@ Lyric and metadata analysis of the current Billboard Hot 100 songs, updated week
     - Artist popularity scores, adding up to 100 points for each charting song they have that week.
     - Average song duration and weeks spent on chart with +/- 84% confidence intervals.
 4. This code was uploaded to Lambda via Docker image and set to be triggered when a new json file is uploaded to the Data Lake. It extracts the measurements listed above and appends final data tables which are used for the Dashboard.
-5. The Dashboard is distributed via Heroku *(work in progress).*
+5. The Dashboard is distributed via Heroku.
